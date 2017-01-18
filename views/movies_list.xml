@@ -28,6 +28,7 @@
                             <group>
                                 <field name="name"/>
                                 <field name="director"/>
+                                <field name="main_actors"/>
                                 <field name="show_date"/>
                                 <field name="area"/>
                                 <field name="style"/>
@@ -43,9 +44,10 @@
                                       <field name="planed"/>
                                       <label for="planed" string="计划看"/>
                                 </div>
+                                <field name="summary"/>
                             </group>
                             <group>
-                                <field name="summary"/>
+                                <field name="poster"/>
                                 <field name="film_critic"/>
                             </group>
                         </group>

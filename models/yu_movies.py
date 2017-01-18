@@ -9,6 +9,7 @@ class YuMovies(models.Model):
 
     name = fields.Char(string='电影名称')
     director = fields.Char(string='导演')
+    main_actors = fields.Char(string='主演')
     show_date = fields.Date(string='上映时间')
     area = fields.Char(string='地区')
     style = fields.Char(string='类型')
@@ -19,6 +20,7 @@ class YuMovies(models.Model):
     watched = fields.Boolean(string='已看过')
     planed = fields.Boolean(string='计划看')
     film_critic = fields.Text(string='影评')
+    poster=fields.Html(string='电影海报')
 
     @api.constrains('score')
     def _constrains_score(self):
