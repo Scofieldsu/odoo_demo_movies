@@ -6,7 +6,7 @@
             <field name="model">yu.movies</field>
             <field name="arch" type="xml">
                 <tree string="电影列表">
-                    <field name="name"/>
+                    <field name="name" required="1"/>
                     <field name="director"/>
                     <field name="show_date"/>
                     <field name="area"/>
