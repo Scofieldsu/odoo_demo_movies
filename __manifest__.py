@@ -23,6 +23,7 @@
     # always loaded
     'data': [
        'views/index.xml',
+       'views/movies_list.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

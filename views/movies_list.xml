@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_yu_movies_list_tree" model="ir.ui.view">
+            <field name="name">yu.movies</field>
+            <field name="model">yu.movies</field>
+            <field name="arch" type="xml">
+                <tree string="电影列表">
+                    <field name="name"/>
+                    <field name="director"/>
+                    <field name="show_date"/>
+                    <field name="area"/>
+                    <field name="style"/>
+                    <field name="score"/>
+                    <field name="liked"/>
+                    <field name="watched"/>
+                    <field name="planed"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_yu_movies_list_form">
+            <field name="name">yu.movies</field>
+            <field name="model">yu.movies</field>
+            <field name="arch" type="xml">
+                <form string="电影详情">
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="director"/>
+                                <field name="show_date"/>
+                                <field name="area"/>
+                                <field name="style"/>
+                                <field name="score"/>
+                                <label for ="your_actions" string="关于电影,你..."/>
+                                <div>
+                                      <field name="liked"/>
+                                      <label for="liked" string="喜欢"/>
+
+                                      <field name="watched"/>
+                                      <label for="watched" string="已看过"/>
+
+                                      <field name="planed"/>
+                                      <label for="planed" string="计划看"/>
+                                </div>
+                            </group>
+                            <group>
+                                <field name="summary"/>
+                                <field name="film_critic"/>
+                            </group>
+                        </group>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>
