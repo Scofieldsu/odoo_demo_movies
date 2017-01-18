@@ -13,8 +13,14 @@
                     <field name="style"/>
                     <field name="score"/>
                     <field name="liked"/>
+                    <button name="action_liked" string="喜欢" type="object"
+                            attrs="{'invisible':[('liked','=','True')]}"/>
                     <field name="watched"/>
+                    <button name="action_watched" string="看过" type="object"
+                            attrs="{'invisible':[('watched','=','True')]}"/>
                     <field name="planed"/>
+                    <button name="action_planed" string="加入计划" type="object"
+                            attrs="{'invisible':[('planed','=','True')]}"/>
                 </tree>
             </field>
         </record>

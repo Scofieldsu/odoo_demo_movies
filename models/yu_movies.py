@@ -30,3 +30,18 @@ class YuMovies(models.Model):
             raise ValidationError('喜欢就是放肆，但爱就是克制!(10分制)')
         else:
         	pass
+
+    @api.multi
+    def action_liked(self):
+        self.ensure_one()
+        self.write({'liked': 'True'})
+
+    @api.multi
+    def action_watched(self):
+        self.ensure_one()
+        self.write({'watched': 'True'})
+
+    @api.multi
+    def action_planed(self):
+        self.ensure_one()
+        self.write({'planed': 'True'})
