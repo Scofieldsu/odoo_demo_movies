@@ -8,10 +8,46 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
+        
+        <record id="yu_directors_list_action" model="ir.actions.act_window">
+            <field name="name">导演列表</field>
+            <field name="res_model">yu.director</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="yu_actors_list_action" model="ir.actions.act_window">
+            <field name="name">演员列表</field>
+            <field name="res_model">yu.actor</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <record id="yu_types_list_action" model="ir.actions.act_window">
+            <field name="name">类型列表</field>
+            <field name="res_model">yu.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
         <menuitem id="yu_movies" name="电影demo"/>
+
         <menuitem id="yu_movies_menu" name="电影" parent="yu_movies"/>
+
         <menuitem id="yu_movies_list" name="电影列表" parent="yu_movies_menu"
                   action="yu_movies_list_action"
                   sequence="1"/>
+
+        <menuitem id="yu_directors_list" name="导演列表" parent="yu_movies_menu"
+                  action="yu_directors_list_action"
+                  sequence="2"/>
+
+        <menuitem id="yu_actors_list" name="演员列表" parent="yu_movies_menu"
+                  action="yu_actors_list_action"
+                  sequence="3"/>
+
+        <menuitem id="yu_types_list" name="类型列表" parent="yu_movies_menu"
+                  action="yu_types_list_action"
+                  sequence="4"/>
     </data>
 </openerp>

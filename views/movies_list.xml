@@ -6,11 +6,10 @@
             <field name="model">yu.movies</field>
             <field name="arch" type="xml">
                 <tree string="电影列表">
-                    <field name="name" required="1"/>
-                    <field name="director"/>
+                    <field name="name" />
+                    <field name="director_id"/>
                     <field name="show_date"/>
-                    <field name="area"/>
-                    <field name="style"/>
+                    <field name="area_id"/>
                     <field name="score"/>
                     <field name="liked"/>
                     <button name="action_liked" string="喜欢" type="object"
@@ -32,12 +31,12 @@
                 <form string="电影详情">
                         <group>
                             <group>
-                                <field name="name"/>
-                                <field name="director"/>
-                                <field name="main_actors"/>
+                                <field name="name" required="1"/>
+                                <field name="director_id"/>
+                                <field name="actors" widget="many2many_tags"/>
                                 <field name="show_date"/>
-                                <field name="area"/>
-                                <field name="style"/>
+                                <field name="area_id"/>
+                                <field name="style_ids" widget="many2many_tags" />
                                 <field name="score"/>
                                 <label for ="your_actions" string="关于电影,你..."/>
                                 <div>

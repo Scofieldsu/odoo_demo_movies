@@ -8,11 +8,11 @@ class YuMovies(models.Model):
     _name = 'yu.movies'
 
     name = fields.Char(string='电影名称')
-    director = fields.Char(string='导演')
-    main_actors = fields.Char(string='主演')
+    director_id= fields.Many2one('yu.director', ondelete='restrict',string='导演')
+    actors = fields.Many2many('yu.actor','yu_movies_actor_rel','movies_id','actor_id','演员')
     show_date = fields.Date(string='上映时间')
-    area = fields.Char(string='地区')
-    style = fields.Char(string='类型')
+    area_id = fields.Many2one('yu.area', ondelete='restrict',string='地区')
+    style_ids = fields.Many2many('yu.type','yu_movies_type_rel','movies_id','type_id','类型')
     score = fields.Float(string='评分(10分制)')
     summary = fields.Text(string='简介')
     your_actions = fields.Char(string='关于电影,你')

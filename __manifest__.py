@@ -24,6 +24,9 @@
     'data': [
        'views/index.xml',
        'views/movies_list.xml',
+       'views/type.xml',
+       'views/actor.xml',
+       'views/director.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
