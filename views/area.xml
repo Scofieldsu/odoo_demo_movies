@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_yu_areas_list_tree" model="ir.ui.view">
+            <field name="name">yu.area</field>
+            <field name="model">yu.area</field>
+            <field name="arch" type="xml">
+                <tree string="地区列表">
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_yu_areas_list_form">
+            <field name="name">yu.area</field>
+            <field name="model">yu.area</field>
+            <field name="arch" type="xml">
+                <form string="地区详情">
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                            </group>
+                        </group>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

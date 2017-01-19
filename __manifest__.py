@@ -27,6 +27,7 @@
        'views/type.xml',
        'views/actor.xml',
        'views/director.xml',
+       'views/area.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
