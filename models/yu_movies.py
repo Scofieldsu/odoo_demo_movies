@@ -20,7 +20,13 @@ class YuMovies(models.Model):
     watched = fields.Boolean(string='已看过')
     planed = fields.Boolean(string='计划看')
     film_critic = fields.Text(string='影评')
-    poster=fields.Html(string='电影海报')
+    poster = fields.Html(string='电影海报')
+    film_comments = fields.One2many(
+        'yu.movies.comments',
+        'yu_movies_id',
+        string='大家评论',
+        copy=True
+    )
 
     @api.constrains('score')
     def _constrains_score(self):
@@ -45,3 +51,35 @@ class YuMovies(models.Model):
     def action_planed(self):
         self.ensure_one()
         self.write({'planed': 'True'})
+
+
+class YuComments(models.Model):
+    _name = 'yu.movies.comments'
+
+    yu_movies_id = fields.Many2one(
+        'yu.movies',
+        string='大家评论',
+        required=True,
+        ondelete='cascade',
+        index=True,
+        copy=False
+    )
+    # create_uid = Many2one(comodel_name='res.users',
+    #     string='评论者',
+    #     readonly=True,
+    #     default=lambda self: self.env.user.id,)
+    comment = fields.Char(string='评论')
+    stars = fields.Selection(
+        string='评分',
+        selection='_get_movie_stars',
+    )
+
+    @api.model
+    def _get_movie_stars(self):
+        return [
+            ('1', '🌟'),
+            ('2', '🌟🌟'),
+            ('3', '🌟🌟🌟'),
+            ('4', '🌟🌟🌟🌟'),
+            ('5', '🌟🌟🌟🌟🌟'),
+        ]

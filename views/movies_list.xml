@@ -56,6 +56,18 @@
                                 <field name="film_critic"/>
                             </group>
                         </group>
+                        <notebook colspan="4">
+                            <page string="大家来评论" autofocus="autofocus">
+                                <field name="film_comments">
+                                    <tree string="评论" editable="bottom">
+                                        <field name="stars"/>
+                                        <field name="comment"/>
+                                         <field name="create_uid" string='评论者' readonly='1' />
+                                        <field name="create_date" string='评论时间' readonly='1' />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
                 </form>
             </field>
         </record>
