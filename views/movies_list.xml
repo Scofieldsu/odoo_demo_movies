@@ -60,7 +60,7 @@
                             <page string="大家来评论" autofocus="autofocus">
                                 <field name="film_comments">
                                     <tree string="评论" editable="bottom">
-                                        <field name="stars"/>
+                                        <field name="stars" required='1'/>
                                         <field name="comment"/>
                                          <field name="create_uid" string='评论者' readonly='1' />
                                         <field name="create_date" string='评论时间' readonly='1' />
@@ -70,9 +70,9 @@
                             <page string="获奖情况" autofocus="autofocus">
                                 <field name="film_awards">
                                     <tree string="获奖" editable="bottom">
-           <!--                              <field name="movies_awards_id"/>
-                                        <field name="awards_type_id"/> -->
-                                        <field name="awards" />
+                                        <field name="movies_awards_id" required='1'/>
+                                        <field name="awards_type_id" required='1'/>
+                                        <field name="awards" required='1' />
                                     </tree>
                                 </field>
                             </page>

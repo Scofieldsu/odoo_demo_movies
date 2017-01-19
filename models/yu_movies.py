@@ -99,9 +99,9 @@ class YuMoviesAwards(models.Model):
         copy=False
     )
     # 哪一届？什么奖？
-    # movies_awards_id = Many2one('yu.awards',string='电影奖',ondelete='restrict')
+    movies_awards_id = fields.Many2one('yu.awards',string='电影奖',ondelete='restrict')
     # 1部电影多个奖项？
-    # awards_type_id = Many2one('yu.awards.type',string='奖项',ondelete='restrict')
+    awards_type_id = fields.Many2one('yu.awards.type',string='奖项',ondelete='restrict')
 
     awards = fields.Selection(
         string='获奖／提名',

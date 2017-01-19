@@ -44,6 +44,13 @@
             <field name="view_mode">tree,form</field>
         </record>
 
+        <record id="yu_movies_awards_type_list_action" model="ir.actions.act_window">
+            <field name="name">奖项</field>
+            <field name="res_model">yu.awards.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
         <menuitem id="yu_movies" name="电影demo"/>
 
         <menuitem id="yu_movies_menu" name="电影" parent="yu_movies" sequence="1"/>
@@ -74,5 +81,9 @@
         <menuitem id="yu_movies_awards_list" name="电影奖" parent="yu_awards_list"
                   action="yu_movies_awards_list_action"
                   sequence="1"/>
+
+        <menuitem id="yu_movies_awards_type_list" name="奖项" parent="yu_awards_list"
+                  action="yu_movies_awards_type_list_action"
+                  sequence="2"/>
     </data>
 </openerp>

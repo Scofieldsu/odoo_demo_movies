@@ -9,7 +9,7 @@
         俞元的电影demo模块
     """,
 
-    'author': "",
+    'author': "scofield_yu",
     'website': "https://scofieldsu.github.io/",
 
     # Categories can be used to filter modules in modules listing
@@ -29,6 +29,7 @@
        'views/director.xml',
        'views/area.xml',
        'views/awards.xml',
+       'views/awards_type.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
