@@ -1,0 +1,5 @@
+.svn
+*.pyc
+# compiled python files
+*.py[co]
+.DS_Store
