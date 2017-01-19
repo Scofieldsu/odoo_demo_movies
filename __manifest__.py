@@ -28,6 +28,7 @@
        'views/actor.xml',
        'views/director.xml',
        'views/area.xml',
+       'views/awards.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

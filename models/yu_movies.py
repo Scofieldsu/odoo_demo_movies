@@ -8,6 +8,7 @@ class YuMovies(models.Model):
     _name = 'yu.movies'
 
     name = fields.Char(string='电影名称')
+    # 1部电影多个导演？
     director_id= fields.Many2one('yu.director', ondelete='restrict',string='导演')
     actors = fields.Many2many('yu.actor','yu_movies_actor_rel','movies_id','actor_id','演员')
     show_date = fields.Date(string='上映时间')
@@ -25,6 +26,12 @@ class YuMovies(models.Model):
         'yu.movies.comments',
         'yu_movies_id',
         string='大家评论',
+        copy=True
+    )
+    film_awards = fields.One2many(
+        'yu.movies.awards',
+        'yu_movies_id',
+        string='获奖情况',
         copy=True
     )
 
@@ -64,10 +71,6 @@ class YuComments(models.Model):
         index=True,
         copy=False
     )
-    # create_uid = Many2one(comodel_name='res.users',
-    #     string='评论者',
-    #     readonly=True,
-    #     default=lambda self: self.env.user.id,)
     comment = fields.Char(string='评论')
     stars = fields.Selection(
         string='评分',
@@ -82,4 +85,32 @@ class YuComments(models.Model):
             ('3', '🌟🌟🌟'),
             ('4', '🌟🌟🌟🌟'),
             ('5', '🌟🌟🌟🌟🌟'),
+        ]
+
+class YuMoviesAwards(models.Model):
+    _name = 'yu.movies.awards'
+    
+    yu_movies_id = fields.Many2one(
+        'yu.movies',
+        string='获奖情况',
+        required=True,
+        ondelete='cascade',
+        index=True,
+        copy=False
+    )
+    # 哪一届？什么奖？
+    # movies_awards_id = Many2one('yu.awards',string='电影奖',ondelete='restrict')
+    # 1部电影多个奖项？
+    # awards_type_id = Many2one('yu.awards.type',string='奖项',ondelete='restrict')
+
+    awards = fields.Selection(
+        string='获奖／提名',
+        selection='_get_movie_awards',
+    )
+
+    @api.model
+    def _get_movie_awards(self):
+        return [
+            ('1', '🏆'),
+            ('0', '提名')
         ]

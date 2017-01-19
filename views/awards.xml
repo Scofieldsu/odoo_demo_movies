@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_yu_awards_list_tree" model="ir.ui.view">
+            <field name="name">yu.awards</field>
+            <field name="model">yu.awards</field>
+            <field name="arch" type="xml">
+                <tree string="电影奖列表">
+                    <field name="name" string='电影奖'/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_yu_awards_list_form">
+            <field name="name">yu.awards</field>
+            <field name="model">yu.awards</field>
+            <field name="arch" type="xml">
+                <form string="电影奖详情">
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                            </group>
+                        </group>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

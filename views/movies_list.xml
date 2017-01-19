@@ -67,6 +67,15 @@
                                     </tree>
                                 </field>
                             </page>
+                            <page string="获奖情况" autofocus="autofocus">
+                                <field name="film_awards">
+                                    <tree string="获奖" editable="bottom">
+           <!--                              <field name="movies_awards_id"/>
+                                        <field name="awards_type_id"/> -->
+                                        <field name="awards" />
+                                    </tree>
+                                </field>
+                            </page>
                         </notebook>
                 </form>
             </field>

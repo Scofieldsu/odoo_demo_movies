@@ -6,3 +6,4 @@ import yu_director
 import yu_area
 import yu_actor
 import yu_type
+import yu_awards
