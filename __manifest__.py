@@ -30,6 +30,7 @@
        'views/area.xml',
        'views/awards.xml',
        'views/awards_type.xml',
+       'views/album.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

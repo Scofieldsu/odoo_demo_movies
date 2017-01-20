@@ -6,6 +6,13 @@
             <field name="name">电影列表</field>
             <field name="res_model">yu.movies</field>
             <field name="view_type">form</field>
+            <field name="view_mode">tree,form,kanban</field>
+        </record>
+
+      <record id="yu_album_list_action" model="ir.actions.act_window">
+            <field name="name">电影专辑</field>
+            <field name="res_model">yu.album</field>
+            <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
         
@@ -58,6 +65,10 @@
         <menuitem id="yu_movies_list" name="电影列表" parent="yu_movies_menu"
                   action="yu_movies_list_action"
                   sequence="1"/>
+
+        <menuitem id="yu_album_list" name="电影专辑" parent="yu_movies_menu"
+                  action="yu_album_list_action"
+                  sequence="2"/>
 
         <menuitem id="yu_directors_list" name="导演" parent="yu_movies"
                   action="yu_directors_list_action"
