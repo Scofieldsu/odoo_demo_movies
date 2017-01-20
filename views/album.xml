@@ -36,6 +36,21 @@
                             	<field name="album_picture"/>
                             </group>
                         </group>
+                        <notebook colspan="4">
+                            <page string="专辑电影" autofocus="autofocus">
+                                <field name="album_movies_list">
+                                    <tree string="专辑列表" editable="bottom">
+                                        <field name="movies_id" required='1'/>
+                                        <field name="show_date" readonly='1'/>
+                                        <field name="director_id" readonly='1'/>
+                                        <field name="area_id" readonly='1' />
+                                        <field name="score" readonly='1'/>
+                                        <field name="style_ids" readonly='1' />
+                                        <field name="actors" readonly='1' />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
                 </form>
             </field>
         </record>

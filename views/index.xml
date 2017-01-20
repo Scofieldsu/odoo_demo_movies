@@ -13,7 +13,7 @@
             <field name="name">电影专辑</field>
             <field name="res_model">yu.album</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,kanban</field>
         </record>
         
         <record id="yu_directors_list_action" model="ir.actions.act_window">
