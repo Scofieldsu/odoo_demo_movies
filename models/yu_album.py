@@ -42,7 +42,7 @@ class YuAlbumMoviesList(models.Model):
         ondelete='restrict'
     	)
 
-    director_id= fields.Many2one(string='导演',related='movies_id.director_id')
+    directors= fields.Many2many(string='导演',related='movies_id.directors')
     actors = fields.Many2many(string='演员',related='movies_id.actors')
     show_date = fields.Date(string='上映时间',related='movies_id.show_date')
     area_id = fields.Many2one(string='地区',related='movies_id.area_id')

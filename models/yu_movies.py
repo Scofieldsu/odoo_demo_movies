@@ -9,7 +9,7 @@ class YuMovies(models.Model):
 
     name = fields.Char(string='电影名称')
     # 1部电影多个导演？
-    director_id= fields.Many2one('yu.director', ondelete='restrict',string='导演')
+    directors= fields.Many2many('yu.director','yu_movies_director_rel','movies_id','directors',string='导演')
     actors = fields.Many2many('yu.actor','yu_movies_actor_rel','movies_id','actor_id','演员')
     show_date = fields.Date(string='上映时间')
     area_id = fields.Many2one('yu.area', ondelete='restrict',string='地区')

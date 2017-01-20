@@ -42,7 +42,7 @@
                                     <tree string="专辑列表" editable="bottom">
                                         <field name="movies_id" required='1'/>
                                         <field name="show_date" readonly='1'/>
-                                        <field name="director_id" readonly='1'/>
+                                        <field name="directors" readonly='1'/>
                                         <field name="area_id" readonly='1' />
                                         <field name="score" readonly='1'/>
                                         <field name="style_ids" readonly='1' />
