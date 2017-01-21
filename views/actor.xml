@@ -24,6 +24,30 @@
                                 <field name="area_id"/>
                                 <field name="birthdate"/>
                             </group>
+                            <notebook colspan="4">
+                            <page string="该演员的电影" autofocus="autofocus">
+                                <field name="actor_movies">
+                                    <tree string="电影列表" editable="bottom">
+                                        <field name="movies_id" />
+                                        <field name="show_date" readonly='1'/>
+                                        <field name="directors" readonly='1'/>
+                                        <field name="area_id" readonly='1' />
+                                        <field name="score" readonly='1'/>
+                                        <field name="style_ids" readonly='1' />
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="获奖情况" autofocus="autofocus">
+                                <field name="actor_awards">
+                                    <tree string="获奖" editable="bottom">
+                                        <field name="movies_awards_id" required='1'/>
+                                        <field name="awards_type_id" required='1'/>
+                                        <field name="awards" required='1' />
+                                        <field name="movies_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
                         </group>
                 </form>
             </field>
