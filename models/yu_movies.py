@@ -59,6 +59,25 @@ class YuMovies(models.Model):
         self.ensure_one()
         self.write({'planed': 'True'})
 
+    @api.multi
+    def _check_movies_types(self):
+        sql="""select id,area_id from yu_movies"""
+        self.env.cr.execute(sql)
+        fet=self.env.cr.dictfetchall()
+        if not fet:
+            return True
+        else:
+            for movie in fet:
+                movie_id=movie['id']
+                area_id=movie['area_id']
+                self.env.cr.execute("""select id from yu_area_movies_line where movies_id=%s""",(movie_id,))
+                area_fet=self.env.cr.dictfetchall()
+                if area_fet:
+                    pass
+                else:
+                    self.env.cr.execute("""insert into yu_area_movies_line (yu_area_id,movies_id) values (%s,%s)""",(area_id,movie_id))
+
+        
 
 class YuComments(models.Model):
     _name = 'yu.movies.comments'

@@ -80,4 +80,18 @@
             </field>
         </record>
     </data>
+    <data noupdate="1">
+    <!--定时程序-->
+    <record id="ir_cron_movies_action" model="ir.cron">
+        <field name="name">Check Movies Types</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field eval="True" name="doall"/>
+        <field eval="'yu.movies'" name="model"/>
+        <field eval="'_check_movies_types'" name="function"/>
+        <field eval="0" name="priority"/>
+        <field name="active" eval="True"/>
+    </record>
+    </data>
 </openerp>

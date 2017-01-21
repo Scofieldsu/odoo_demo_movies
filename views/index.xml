@@ -20,42 +20,42 @@
             <field name="name">导演列表</field>
             <field name="res_model">yu.director</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,kanban,graph</field>
         </record>
 
         <record id="yu_actors_list_action" model="ir.actions.act_window">
             <field name="name">演员列表</field>
             <field name="res_model">yu.actor</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,kanban,graph</field>
         </record>
         
         <record id="yu_types_list_action" model="ir.actions.act_window">
             <field name="name">类型列表</field>
             <field name="res_model">yu.type</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,kanban,graph</field>
         </record>
 
         <record id="yu_areas_list_action" model="ir.actions.act_window">
             <field name="name">地区列表</field>
             <field name="res_model">yu.area</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,kanban,graph</field>
         </record>
 
         <record id="yu_movies_awards_list_action" model="ir.actions.act_window">
             <field name="name">电影奖</field>
             <field name="res_model">yu.awards</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,kanban,graph</field>
         </record>
 
         <record id="yu_movies_awards_type_list_action" model="ir.actions.act_window">
             <field name="name">奖项</field>
             <field name="res_model">yu.awards.type</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,kanban,graph</field>
         </record>
 
         <menuitem id="yu_movies" name="电影demo"/>
