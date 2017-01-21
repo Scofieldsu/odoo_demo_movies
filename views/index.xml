@@ -20,14 +20,14 @@
             <field name="name">导演列表</field>
             <field name="res_model">yu.director</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form,kanban,graph</field>
+            <field name="view_mode">kanban,tree,form,graph</field>
         </record>
 
         <record id="yu_actors_list_action" model="ir.actions.act_window">
             <field name="name">演员列表</field>
             <field name="res_model">yu.actor</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form,kanban,graph</field>
+            <field name="view_mode">kanban,tree,form,graph</field>
         </record>
         
         <record id="yu_types_list_action" model="ir.actions.act_window">

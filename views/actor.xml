@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
+        <record model="ir.ui.view" id="view_yu_actor_list_kanban">
+            <field name="name">yu.actor.kanban</field>
+            <field name="model">yu.actor</field>
+            <field name="arch" type="xml">
+                <kanban >
+                    <field name="name"/>
+                    <field name="area_id"/>
+                    <field name="birthdate"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                          <div class="oe_module_vignette oe_kanban_global_click">
+                            <div class="oe_module_desc">
+                              <h4><field name="name"/></h4>
+                              <p class="oe_module_name">
+                                 <t t-if="record.area_id.raw_value"><field name="area_id"/><br/></t>
+                                 <i><field name="birthdate"/></i>
+                              </p>
+                            </div>
+                          </div>
+                        </t>
+                  </templates>
+                </kanban>
+            </field>
+        </record>
         <record id="view_yu_actors_list_tree" model="ir.ui.view">
             <field name="name">yu.actor</field>
             <field name="model">yu.actor</field>
