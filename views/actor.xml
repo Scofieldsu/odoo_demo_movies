@@ -7,6 +7,8 @@
             <field name="arch" type="xml">
                 <tree string="演员列表">
                     <field name="name" />
+                    <field name="area_id"/>
+                    <field name="birthdate"/>
                 </tree>
             </field>
         </record>
@@ -19,6 +21,8 @@
                         <group>
                             <group>
                                 <field name="name" required="1"/>
+                                <field name="area_id"/>
+                                <field name="birthdate"/>
                             </group>
                         </group>
                 </form>
