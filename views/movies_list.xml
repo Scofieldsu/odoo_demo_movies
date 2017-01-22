@@ -10,9 +10,13 @@
                     <field name="area_id"/>
                     <field name="show_date"/>
                     <field name="score"/>
+                    <field name="poster"/>
                     <templates>
                         <t t-name="kanban-box">
                           <div class="oe_module_vignette oe_kanban_global_click">
+                          <div class="o_kanban_image">
+                                <img t-att-src="kanban_image('yu.movies', 'image_small', record.poster)"/>
+                          </div>
                             <div class="oe_module_desc">
                               <h2><field name="name"/></h2>
                               <p><label>评分:</label><field name="score"/></p> 
