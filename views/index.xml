@@ -6,7 +6,7 @@
             <field name="name">电影列表</field>
             <field name="res_model">yu.movies</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form,kanban,graph</field>
+            <field name="view_mode">kanban,tree,form,graph</field>
         </record>
 
       <record id="yu_album_list_action" model="ir.actions.act_window">

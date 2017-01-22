@@ -6,26 +6,41 @@
             <field name="model">yu.movies</field>
             <field name="arch" type="xml">
                 <kanban >
+                    <field name="id"/>
                     <field name="name"/>
                     <field name="area_id"/>
                     <field name="show_date"/>
                     <field name="score"/>
                     <field name="poster"/>
+                    <field name="directors"/>
+                    <field name="actors"/>
                     <templates>
                         <t t-name="kanban-box">
                           <div class="oe_module_vignette oe_kanban_global_click">
-                          <div class="o_kanban_image">
-                                <img t-att-src="kanban_image('yu.movies', 'image_small', record.poster)"/>
-                          </div>
-                            <div class="oe_module_desc">
-                              <h2><field name="name"/></h2>
-                              <p><label>评分:</label><field name="score"/></p> 
-                              <p><label>地区:</label><field name="area_id"/></p>
-                              <p><label>上映日期:</label><field name="show_date"/></p>
-                              <p class="oe_module_name">
+                              <div class="o_kanban_image">
+                                <t t-set="liked" t-value="record.liked == 'True'"/>
+                                <t t-set="watched" t-value="record.watched == 'True'"/>
+                                <t t-set="planed" t-value="record.planed == 'True'"/>
+                                    <img t-att-src="kanban_image('yu.movies', 'image_small', record.id.poster)"/>
+                              </div>
+                              <div class="oe_module_desc">
+                                <h2><field name="name"/></h2>
+                                <p><label>导演:</label><field name="directors"  widget="mny2many_tags" /></p> 
+                                <p><label>主演:</label><field name="actors" widget="mny2many_tags "/></p> 
+                                <p><label>评分:</label><field name="score"/></p> 
+                                <p><label>地区:</label><field name="area_id"/></p>
+                                <p><label>上映日期:</label><field name="show_date"/></p>
+                                <p class="oe_module_name">
+                                 <button type="object" class="btn btn-primary pull-right btn-sm" name="action_planed" planed="True">计划</button>
+                                  <button type="button" t-if="planed" class="btn btn-default pull-right btn-sm disabled" planed="False">取消计划</button>
+                                  <button type="object" class="btn btn-primary pull-right btn-sm" name="action_watched" watched="True">看过</button>
+                                  <button type="button" t-if="watched" class="btn btn-default pull-right btn-sm disabled" watched="False">取消看过</button>
+                                  <button type="object" class="btn btn-primary pull-right btn-sm" name="action_liked" liked="True">喜欢</button>
+                                  <button type="button" t-if="liked" class="btn btn-default pull-right btn-sm disabled" liked="False">取消喜欢</button>
+                                 
                                 <!-- <t t-if="record.area_id.raw_value"><field name="area_id"/><br/></t> -->
-                              </p>
-                            </div>
+                                </p>
+                              </div>
                           </div>
                         </t>
                   </templates>
