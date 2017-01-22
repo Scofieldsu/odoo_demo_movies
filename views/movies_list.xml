@@ -15,10 +15,9 @@
                           <div class="oe_module_vignette oe_kanban_global_click">
                             <div class="oe_module_desc">
                               <h2><field name="name"/></h2>
-                                  <span><label>评分:</label></span>
-                                  <span><h4><field name="score"/></h4></span>    
-                              <p><label>地区:</label><h4><field name="area_id"/></h4></p>
-                              <p><label>上映日期:</label><h4><field name="show_date"/></h4></p>
+                              <p><label>评分:</label><field name="score"/></p> 
+                              <p><label>地区:</label><field name="area_id"/></p>
+                              <p><label>上映日期:</label><field name="show_date"/></p>
                               <p class="oe_module_name">
                                 <!-- <t t-if="record.area_id.raw_value"><field name="area_id"/><br/></t> -->
                               </p>
