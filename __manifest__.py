@@ -31,6 +31,7 @@
        'views/awards.xml',
        'views/awards_type.xml',
        'views/album.xml',
+       'views/homepage.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

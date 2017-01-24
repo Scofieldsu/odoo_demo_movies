@@ -95,10 +95,10 @@
                                       <label for="planed" string="计划看"/>
                                 </div>
                                 <field name="summary"/>
+                                <field name="film_critic"/>
                             </group>
                             <group>
                                 <field name="poster"/>
-                                <field name="film_critic"/>
                             </group>
                         </group>
                         <notebook colspan="4">
