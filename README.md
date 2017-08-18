@@ -1,5 +1,9 @@
 # odoo_demo_movies
 
+![odoo_version](https://img.shields.io/badge/odoo-10.0-875A7B.svg)
+
+---
+
 - odoo10的电影模块
 
 - 独立开发 by Scofield_yu
