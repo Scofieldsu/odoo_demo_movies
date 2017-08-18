@@ -6,7 +6,7 @@
 
 - odoo10的电影模块
 
-- 独立开发 by Scofield_yu
+- 兴趣开发 by Scofield_yu
 
 - 部分功能未开发完毕
 
